@@ -2,7 +2,7 @@
 repo  for learning under 2k22
 
 
-#commit 1 will include 
+commit 1 will include 
 ----------------------------------------
 1.Using the dotnet CLI
 2.API COntroller and EndPoint
