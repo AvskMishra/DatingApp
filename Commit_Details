@@ -1,0 +1,39 @@
+section 1:commit 1
+------------------------------------
+Learning Goals:
+ Implementing Basic Api functionality and having intoductory understanding of 
+  1.Using the dotnet CLI
+  2.API controller and Endpoints
+  3.Entity Framework
+  4.The API Project Structure 
+  5.COnfiguration and Enviornment Varibales 
+  6.Source Control
+------------------------------------
+
+section 2:commit 2
+------------------------------------
+Learning Goals:
+ Completing the walking skeleton and having intoductory understanding of 
+ 1.Using the angular cli
+ 2.create new angular app
+ 3.angular project files
+ 4.adding bootstrap (ngx-bootstrap)
+ 5.angular http client services
+ 6.resolving CORS error both sides
+ 7.Adding addition packages 
+-------------------------------------
+
+
+section 3:commit 3
+------------------------------------
+Learning Goals: 
+  Implementing basic authentication  in our app and having understanding of 
+   1.How  to store password  into the database   -->1.plaintext  2.password hashing  3.hasing and salting the password 
+   2.using inheritance  in c# DRY principle
+   3.Using DTOs
+   4.Validation
+   5.JWT
+   6.services in c#
+   7.middleware
+   8.Extension  methods -DRY
+      
