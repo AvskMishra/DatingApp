@@ -28,14 +28,19 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            ///enable cors 
+            services.AddCors(c => {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            });
+
             services.AddControllers();
             //services.AddDbContext<DataContext>(options =>
-            //{        
-            //    Console.WriteLine("connections string path ",_config.GetConnectionString("DefaultConnection"));
+            //{  
             //    options.UseSqlite(_config.GetConnectionString("DefaultConnection"));
             //});
 
-            ///connection string  should be in mentioned format   ""ConnectionStrings"" 
+            ///connection string  should be in mentioned format ""ConnectionStrings""  text should be proper
                /* "ConnectionStrings": {
                     "DefaultConnection": "Data source=datingapp.db"
                     },
@@ -46,6 +51,7 @@ namespace API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,11 +63,14 @@ namespace API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIv5 v1"));
             }
+            ///enable cors 
+            app.UseCors(x => x.AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials()
+                        .WithOrigins("http://localhost:4200"));
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
