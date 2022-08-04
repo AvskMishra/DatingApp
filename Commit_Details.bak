@@ -28,7 +28,7 @@ section 3:commit 3
 ------------------------------------
 Learning Goals: 
   Implementing basic authentication  in our app and having understanding of 
-   1.How  to store password  into the database
+   1.How  to store password  into the database   -->1.plaintext  2.password hashing  3.hasing and salting the password 
    2.using inheritance  in c# DRY principle
    3.Using DTOs
    4.Validation
@@ -36,4 +36,4 @@ Learning Goals:
    6.services in c#
    7.middleware
    8.Extension  methods -DRY
-   
+      
