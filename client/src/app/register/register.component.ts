@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { AccountService } from '../_services/account.service';
 
 
 @Component({
@@ -17,12 +18,17 @@ export class RegisterComponent implements OnInit {
   // here passing data from register component to home component to set registerMode value based on  cacel button click 
   @Output() cancelRegister = new EventEmitter();
 
-  constructor() { }
+  constructor(private accountService:AccountService) { }
 
   ngOnInit(): void {
   }
   register() {
-    console.log(this.model);
+    this.accountService.register(this.model).subscribe(response=>{
+      console.log(response);
+      this.cancel();
+    },error=>{
+      console.log(error);
+    });
   }
   cancel() {
     this.cancelRegister.emit(false);

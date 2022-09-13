@@ -30,6 +30,18 @@ export class AccountService {
     this.currenUserSource.next(user);
   }
 
+  register(model: any) {
+    return this.http.post(this.baseUrl + 'account/register', model).pipe(
+      map(user => {
+        if (user) {
+          localStorage.setItem('user', JSON.stringify(user));
+          this.currenUserSource.next(user);
+        }
+       // return user;
+      })
+    )
+  }
+
   logout() { 
     localStorage.removeItem('user');
     this.currenUserSource.next(null);
