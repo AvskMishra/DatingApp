@@ -48,6 +48,10 @@ Learning Goals:
  6.Parent to child communication
  7.Child to parent communication    
  
+ migration commad to reset db:
+ Drop-Database
+   then 
+  update-database
  section 6:
 ------------------------------------
 Learning Goals:

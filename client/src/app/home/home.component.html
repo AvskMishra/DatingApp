@@ -12,9 +12,7 @@
     <div *ngIf="registerMode" class="container">
         <div class="row justify-content-center">
             <div class="col-4">
-                <!-- [usersFromHomeComponent]="users"used for parent to child communication-->
-                <!-- (cancelRegister)="this.cancelRegisterMode($event)" used for child to parent communication-->
-                <app-register [usersFromHomeComponent]="users" (cancelRegister)="this.cancelRegisterMode($event)">
+                <app-register (cancelRegister)="this.cancelRegisterMode($event)">
                 </app-register>
             </div>
         </div>
