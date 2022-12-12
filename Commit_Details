@@ -47,3 +47,11 @@ Learning Goals:
  5.Structural directive to apply conditional changes.  
  6.Parent to child communication
  7.Child to parent communication    
+ 
+ section 6:
+------------------------------------
+Learning Goals:
+1.Angular Routing
+2.bootstrap theme
+3.Route Guards
+4.Shared Module
