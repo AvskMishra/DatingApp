@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { User } from '../_model/user';
 import { AccountService } from '../_services/account.service';
@@ -11,40 +12,22 @@ import { AccountService } from '../_services/account.service';
 export class NavComponent implements OnInit {
   model: any = {}
 
- //currentUser$!: Observable<User>;
 
-  //currentUser$:Observable<User>;
-  
- // loggedIn: boolean = false;
-
-  constructor(public accountService: AccountService) { }
+  constructor(public accountService: AccountService, private router: Router) { }
 
   ngOnInit(): void {
-   // this.currentUser$=this.accountService.currentUser$;
   }
 
   login() {
     console.log(this.model);
-    this.accountService.login(this.model).subscribe(response => {
-      console.log(response);
-     // this.loggedIn = true;
-    }, err => {
-      console.log(err);
+    this.accountService.login(this.model).subscribe({
+      next: _ => this.router.navigateByUrl('/members'),
+      error: error => console.log(error)
     });
   }
 
   logout() {
-   // this.loggedIn = false;
     this.accountService.logout();
+    this.router.navigateByUrl('/');
   }
-
-  // getCurrentUser() {
-  //   ///currentUser$ is not a normal http call its of type observable so may be it never complete  and there may be tha chance of memory leak .
-  //   ///we will try to move it to html section  with async pipe
-  //   this.accountService.currentUser$.subscribe(user => {
-  //     this.loggedIn = !!user;
-  //   }, error => {
-  //     console.log(error);
-  //   })
-  // }
 }
