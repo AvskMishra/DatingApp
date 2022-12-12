@@ -1,4 +1,4 @@
-section 1:commit 1
+section 2:commit 1
 ------------------------------------
 Learning Goals:
  Implementing Basic Api functionality and having intoductory understanding of 
@@ -10,7 +10,7 @@ Learning Goals:
   6.Source Control
 ------------------------------------
 
-section 2:commit 2
+section 3:commit 2
 ------------------------------------
 Learning Goals:
  Completing the walking skeleton and having intoductory understanding of 
@@ -24,7 +24,7 @@ Learning Goals:
 -------------------------------------
 
 
-section 3:commit 3
+section 4:commit 3
 ------------------------------------
 Learning Goals: 
   Implementing basic authentication  in our app and having understanding of 
@@ -36,4 +36,22 @@ Learning Goals:
    6.services in c#
    7.middleware
    8.Extension  methods -DRY
-      
+
+section 5:commit 4,5,6
+------------------------------------
+Learning Goals:
+ 1.Creating component by CLI
+ 2.Template Driven form
+ 3.Angular Services
+ 4.Observables 
+ 5.Structural directive to apply conditional changes.  
+ 6.Parent to child communication
+ 7.Child to parent communication    
+ 
+ section 6:
+------------------------------------
+Learning Goals:
+1.Angular Routing
+2.bootstrap theme
+3.Route Guards
+4.Shared Module
